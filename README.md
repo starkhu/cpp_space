@@ -1,3 +1,4 @@
-# cpp_space
-cpp space
-this is readme.md
+
+**size_function**
+  介绍sizeof() strlen()
+
