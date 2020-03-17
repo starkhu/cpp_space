@@ -9,10 +9,14 @@ Orange::Orange() {
 void Orange::setName(std::string name) {
   name_ = name;
 }
+void Orange::printName() {
+  std::cout << name_ << std::endl;
+}
 
 int main() {
   Orange org;
-  org.setName("two");  
+  org.setName("two");
+  org.printName();
   return 0;
 }
 
