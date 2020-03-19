@@ -10,6 +10,7 @@
 
 **function**:  
   anonymous_test.cc: 介绍匿名函数
+  bind_test.cc: 介绍bind函数适配器
 
 **operator**:  
   operator_test.cc: 介绍位移，与，或操作
