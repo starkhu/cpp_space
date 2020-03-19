@@ -8,6 +8,9 @@
   ifdef_test.cc : 介绍条件编译
   macro_function_test.cc: 介绍宏定义函数
 
+**function**:  
+  anonymous_test.cc: 介绍匿名函数
+
 **operator**:  
   operator_test.cc: 介绍位移，与，或操作
 
@@ -19,7 +22,7 @@
     介绍sizeof() strlen()
 
 **sstream**:  
-  sstream: 介绍istringstream
+  sstream.cc: 介绍istringstream, ostringstream
 
 **stl**:  
   map_container.cc: 介绍map unordered_map
