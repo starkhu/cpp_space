@@ -1,35 +1,34 @@
 
+**class**:
+- orange.h: 介绍=default =delete.
 
+**ifdef**:
+- ifdef_test.cc : 介绍条件编译
+- macro_function_test.cc: 介绍宏定义函数
 
-**class**:  
-  orange.h: 介绍=default =delete.
+**function**:
+- anonymous_test.cc: 介绍匿名函数
+- bind_test.cc: 介绍bind函数适配器
 
-**ifdef**:  
-  ifdef_test.cc : 介绍条件编译
-  macro_function_test.cc: 介绍宏定义函数
+**operator**: 
+- math_test.cc 介绍平方，开方，绝对值运算
+- operator_test.cc: 介绍位移，与，或操作
 
-**function**:  
-  anonymous_test.cc: 介绍匿名函数
-  bind_test.cc: 介绍bind函数适配器
+**ptr**:
+- second_level_ptr: 介绍二级指针，详情见：https://www.jianshu.com/p/86a60851636d
+- unique_ptr: 介绍unique_ptr
 
-**operator**:  
-  operator_test.cc: 介绍位移，与，或操作
+**size_function**:
+- 介绍sizeof() strlen()
 
-**ptr**:  
-    second_level_ptr: 介绍二级指针，详情见：https://www.jianshu.com/p/86a60851636d
-    unique_ptr: 介绍unique_ptr
+**sstream**:
+- sstream.cc: 介绍istringstream, ostringstream
 
-**size_function**:  
-    介绍sizeof() strlen()
+**stl**:
+- map_container.cc: 介绍map unordered_map
 
-**sstream**:  
-  sstream.cc: 介绍istringstream, ostringstream
+**thread**:
+- simple_thread.cc 介绍thread的构造函数
 
-**stl**:  
-  map_container.cc: 介绍map unordered_map
-
-**thread**:  
-  simple_thread.cc 介绍thread的构造函数
-
-**typename**:  
-    介绍typename非常好的一篇博客：https://blog.csdn.net/vanturman/article/details/80269081
+**typename**:
+- 介绍typename非常好的一篇博客：https://blog.csdn.net/vanturman/article/details/80269081
