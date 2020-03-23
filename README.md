@@ -14,10 +14,6 @@
 - memory_manage.cc: 介绍malloc/free，new/delete，malloc_usable_size
 -                 : 介绍垂悬指针
 
-**operator**: 
-- math_test.cc 介绍平方，开方，绝对值运算
-- operator_test.cc: 介绍位移，与，或操作
-
 **ptr**:
 - second_level_ptr: 介绍二级指针，详情见：https://www.jianshu.com/p/86a60851636d
 - unique_ptr: 介绍unique_ptr
@@ -30,6 +26,11 @@
 
 **stl**:
 - map_container.cc: 介绍map unordered_map
+
+**sys_func**: 
+- math_test.cc 介绍平方，开方，绝对值运算
+- operator_test.cc: 介绍位移，与，或操作
+- rand_test.cc: 介绍RAND_MAX rand()
 
 **thread**:
 - simple_thread.cc 介绍thread的构造函数
