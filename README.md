@@ -10,6 +10,10 @@
 - anonymous_test.cc: 介绍匿名函数
 - bind_test.cc: 介绍bind函数适配器
 
+**memory_manage**:
+- memory_manage.cc: 介绍malloc/free，new/delete，malloc_usable_size
+-                 : 介绍垂悬指针
+
 **operator**: 
 - math_test.cc 介绍平方，开方，绝对值运算
 - operator_test.cc: 介绍位移，与，或操作
