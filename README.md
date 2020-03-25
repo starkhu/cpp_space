@@ -1,4 +1,12 @@
+# 编译原理
 
+**从源码编写到程序运行的过程**：
+-    https://blog.csdn.net/kang___xi/article/details/79571137
+**静态链接和动态链接**：
+-    https://blog.csdn.net/kang___xi/article/details/80210717
+-    https://www.cnblogs.com/qianxiaoxu/p/11876198.html
+
+# 功能介绍
 **class**:
 - orange.h: 介绍=default =delete.
 
