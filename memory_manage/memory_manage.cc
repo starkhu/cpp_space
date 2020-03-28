@@ -9,8 +9,6 @@
  *  即垂悬指针，也称野指针。
  *  所以delete, free后，需要将指针指向空，避免野指针的存在。
  ****************************************************************************/
-
-
 #include <iostream>
 
 #ifdef LINUX_OS
@@ -59,18 +57,4 @@ void pairMallocFree() {
   ptr1 = NULL;
   ptr2 = NULL;
 }
-
-
-
-
-int main() {
-  pairNewDelete();
-  pairMallocFree();
-  return 0;
-}
-
-
-
-
-
 
