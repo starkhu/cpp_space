@@ -2,6 +2,7 @@
 
 **从源码编写到程序运行的过程**：
 -    https://blog.csdn.net/kang___xi/article/details/79571137
+
 **静态链接和动态链接**：
 -    https://blog.csdn.net/kang___xi/article/details/80210717
 -    https://www.cnblogs.com/qianxiaoxu/p/11876198.html
@@ -21,6 +22,7 @@
 **memory_manage**:
 - memory_manage.cc: 介绍malloc/free，new/delete，malloc_usable_size
 -                 : 介绍垂悬指针
+- memcpy.cc: 介绍memcpy函数
 
 **ptr**:
 - second_level_ptr: 介绍二级指针，详情见：https://www.jianshu.com/p/86a60851636d
