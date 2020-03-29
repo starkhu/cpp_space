@@ -4,19 +4,18 @@
  *=delete  显示禁止定义某类成员函数 
  *explict  禁止隐式转换，即禁止对象的这种赋值: cls obj_b = obj_a
  ************************************************************************************/
-
-
 #include<string>
-
-class Orange {
+#include "tree.h"
+class Orange : public Tree {
  public:
   Orange(); // = default; 
   // explict Orange(std::string name);
   Orange(Orange&) = delete;
-  void setName(std::string name);
-  void printName();
+  ~Orange();
+  virtual void setName(std::string name);
+  virtual void printName();
 
   private:
+    bool is_fruit_ = true;
     std::string name_;
-    float age_;
 };
