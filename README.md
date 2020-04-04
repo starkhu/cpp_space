@@ -10,6 +10,7 @@
 # 功能介绍
 ## class
 - orange.h: 介绍=default =delete.
+- tree.h: 介绍抽象类，纯虚函数
 
 ## data_structure:
 ### stl

@@ -8,14 +8,13 @@
 #include "tree.h"
 class Orange : public Tree {
  public:
-  Orange(); // = default; 
+  Orange(std::string name, std::string ctg); // = default; 
   // explict Orange(std::string name);
   Orange(Orange&) = delete;
   ~Orange();
-  virtual void setName(std::string name);
-  virtual void printName();
+
+  bool isFruitTree();
 
   private:
     bool is_fruit_ = true;
-    std::string name_;
 };

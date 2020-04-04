@@ -2,14 +2,18 @@
 #include <string>
 #include "tree.h"
 
-Tree::Tree() {
+Tree::Tree(std::string name, std::string ctg) {
   std::cout << "Tree::Tree()" << std::endl;
-  age_ = 1.0;
-  name_ = "tree";
-  std::cout << "sizeof name_: " << sizeof(name_) << std::endl;
+  name_ = name;
+  ctg_ = ctg;
 }
+
 Tree::~Tree() {
   std::cout << "Tree::~Tree()" << std::endl;
+}
+
+std::string Tree::getName() {
+  return name_;
 }
 
 void Tree::setName(std::string name) {
