@@ -2,24 +2,17 @@
 #include<string>
 #include "orange.h"
 
-Orange::Orange() {
+Orange::Orange(std::string name, std::string ctg) : Tree (name, ctg){
   std::cout << "Orange::Orange()" << std::endl;
-  is_fruit_ = true;
-  name_ = "juzi";
-  std::cout << "sizeof name_ is: " << sizeof(name_) << std::endl;
 }
 
 Orange::~Orange() {
   std::cout << "Orange::~Orange()" << std::endl;
 }
 
-void Orange::setName(std::string name) {
-  name_ = name;
+bool Orange::isFruitTree() {
+  return is_fruit_;
 }
-void Orange::printName() {
-  std::cout << name_ << std::endl;
-}
-
 
 
 

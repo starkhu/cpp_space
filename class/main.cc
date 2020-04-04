@@ -9,10 +9,11 @@
 #include "orange.h"
 
 int main() {
-  Orange org;
+  Orange org("shangtangju", "Orange");
   org.setName("shatangju");
   org.printName();
   std::cout << "sizeof org: " << sizeof(org) << std::endl;
+  std::cout << "is fruit tree: " << org.isFruitTree() << std::endl;
   return 0;
 }
 
