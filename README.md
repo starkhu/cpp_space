@@ -9,8 +9,9 @@
 
 # 功能介绍
 ## class
-- orange.h: 介绍=default =delete.
-- tree.h: 介绍抽象类，纯虚函数
+- orange.h: 介绍=default =delete. 构造函数 析构函数
+- tree.h: 介绍抽象类，纯虚函数 友元函数
+- fruit.h:
 
 ## data_structure:
 ### stl
