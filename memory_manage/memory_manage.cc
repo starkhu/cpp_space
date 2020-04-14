@@ -2,7 +2,7 @@
  *1 malloc和new的区别：
  *  new/delete是操作符，malloc/free是函数
  *  new/delete除了负责分配销毁地址空间，还调用对象的构造/析构函数，
- *  malloc/free只负责分配销毁一片地址。
+ *  malloc/free只负责分配销毁一片地址, 对象是虚拟内存。
  *2 垂悬指针：
  *  当一个指针被delete或者free,指针指向的内存区域并不会被清空，因为这会占用
  *  cpu周期，所以在delete，free操作后，仍然能打印指针指向的内容（可能是乱码）。

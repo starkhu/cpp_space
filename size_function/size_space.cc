@@ -27,15 +27,15 @@ void stringPrint() {
 }
 
 int main() {
-  #if 0
+#if 0
   int arr[10] = {1, 2, 3};
   std::cout << sizeof(arr) << std::endl;
   sizePrint(arr);
-  #endif
+#endif
 
   //part two
-  #if 1
+#if 1
   stringPrint();
-  #endif
+#endif
   return 0;
 }
