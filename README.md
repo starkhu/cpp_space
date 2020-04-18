@@ -26,6 +26,7 @@
 ## function:
 - anonymous_test.cc: 介绍匿名函数
 - bind_test.cc: 介绍bind函数适配器
+- call_back: 介绍函数指针，回调函数
 
 ## memory_manage:
 - memory_manage.cc: 介绍malloc/free，new/delete，malloc_usable_size
