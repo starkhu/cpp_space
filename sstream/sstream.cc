@@ -1,3 +1,10 @@
+/************************************************************************************
+ *istringstream: 从string对象中读取
+ *ostringstream: 写到string对象中去
+ *stringstream: 上述两个类型的集合体，对string对象进行读取
+ *str(): 将stringstream对象转换成string对象
+ ************************************************************************************/
+
 #include <iostream>
 #include <sstream>
 #include <string>
