@@ -49,6 +49,7 @@
 
 ## sys_func: 
 - assert.cc: 介绍assert static_assert
+_ build_in.cc: 介绍__build_expect
 - math_test.cc 介绍平方，开方，绝对值运算
 - operator_test.cc: 介绍位移，与，或操作
 - rand_test.cc: 介绍RAND_MAX rand()
