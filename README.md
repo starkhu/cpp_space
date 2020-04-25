@@ -33,6 +33,9 @@
 -                 : 介绍垂悬指针
 - memcpy.cc: 介绍memcpy函数
 
+## namespace:
+- main.cc: 介绍全局作用域符，命名空间作用域符
+
 ## ptr:
 - second_level_ptr: 介绍二级指针，详情见：https://www.jianshu.com/p/86a60851636d
 - unique_ptr: 介绍unique_ptr
@@ -42,9 +45,10 @@
 - 介绍sizeof() strlen()
 
 ## sstream:
-- sstream.cc: 介绍istringstream, ostringstream
+- sstream.cc: 介绍istringstream, ostringstream, stringstream
 
 ## sys_func: 
+- assert.cc: 介绍assert static_assert
 - math_test.cc 介绍平方，开方，绝对值运算
 - operator_test.cc: 介绍位移，与，或操作
 - rand_test.cc: 介绍RAND_MAX rand()
