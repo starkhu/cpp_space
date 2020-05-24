@@ -1,14 +1,3 @@
-/****************************************************************************
- *std::thread()是c++11加进去的特性
- *std::thread有四个构造函数
- * 1) thread() 
- * 2) thread(Fn&& fn, Args&& args)  创建一个thread对象，该对象可被joinable()
- * 3) thread(std::thread& t1) = delete; 禁止使用拷贝构造函数
- * 4) thread(std::move(t1)) 移动构造函数，可被使用
- ****************************************************************************/
-
-
-
 #include <iostream>
 #include <thread>
 
@@ -39,9 +28,12 @@ void simpleThread() {
   getThreadId(t3);
   std::thread t4(addOneRef, std::ref(n));
   std::thread t5(std::move(t4));
+  std::thread t6([&]{
+      std::cout << "this is thread 6" << std::endl;});
   t2.join();
   t3.join();
   t5.join();
+  t6.join();
   std::cout << "n is: " << n << std::endl;
 }
 
