@@ -13,6 +13,15 @@
 
 #include <iostream>
 
+void purePrint() {
+  std::cout << "size of int is: " << sizeof(int) << std::endl;
+  std::cout << "size of long is: " << sizeof(long) << std::endl;
+  std::cout << "size of long int is: " << sizeof(long int) << std::endl;
+  std::cout << "size of long long is: " << sizeof(long long) << std::endl;
+  std::cout << "size of bouble is: " << sizeof(double) << std::endl;
+  std::cout << "size of long bouble is: " << sizeof(long double) << std::endl;
+}
+
 void sizePrint(int arr[]) {
   std::cout << "in sizePrint function, sizeof arr is " << sizeof(arr) << std::endl;
 }
@@ -34,8 +43,10 @@ int main() {
 #endif
 
   //part two
-#if 1
+#if 0
   stringPrint();
 #endif
+
+purePrint();
   return 0;
 }

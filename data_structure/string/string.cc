@@ -48,8 +48,25 @@ void convertString() {
 	    <<std::endl;
 }
 
+//substr()
+void subStr() {
+  std::string str = "helloworld";
+  std::string sub_str = str.substr(0, 5);
+  std::cout << "str: " << str << ", sub_str: " << sub_str << std::endl;
+}
+
+//"a" +"b" -> "ab"
+void concatStr() {
+  std::string str_a = "a";
+  std::string str_b = "b";
+  std::string str = str_a + str_b;
+  std::cout << "a, b, ab: " << str_a << ", " << str_b << ", " << str << std::endl;
+}
+
 int main() {
   // strSize();
-  convertString();
+  // convertString();
+  subStr();
+  concatStr();
   return 0;
 }
