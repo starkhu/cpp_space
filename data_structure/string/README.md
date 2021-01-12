@@ -43,3 +43,8 @@
     w) begin() end() //提供类似STL的迭代器支持
     x) rbegin() rend() //逆向迭代器
     y) get_allocator() //返回配置器
+
+## int与string的互转：
+int2string: s-'0'
+string2int:  std::to_string(int_value)
+
