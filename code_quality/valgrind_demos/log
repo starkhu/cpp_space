@@ -1,0 +1,61 @@
+==47785== Memcheck, a memory error detector
+==47785== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==47785== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==47785== Command: ./t
+==47785== Parent PID: 782
+==47785== 
+==47785== Invalid write of size 4
+==47785==    at 0x4009DD: test_case2() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400ACF: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==  Address 0x5ab6cf8 is 0 bytes after a block of size 40 alloc'd
+==47785==    at 0x4C2E80F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47785==    by 0x4009D0: test_case2() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400ACF: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785== 
+==47785== Conditional jump or move depends on uninitialised value(s)
+==47785==    at 0x4009F2: test_case3() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400AD4: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785== 
+==47785== Invalid free() / delete / delete[] / realloc()
+==47785==    at 0x4C2F74B: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47785==    by 0x400A41: test_case4() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400AD9: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==  Address 0x5ab6d40 is 0 bytes inside a block of size 4 free'd
+==47785==    at 0x4C2F74B: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47785==    by 0x400A2E: test_case4() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400AD9: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==  Block was alloc'd at
+==47785==    at 0x4C2E80F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47785==    by 0x400A17: test_case4() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400AD9: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785== 
+==47785== Source and destination overlap in memcpy(0xffeffffb0, 0xffeffffb2, 3)
+==47785==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47785==    by 0x400A85: test_case5() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400ADE: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785== 
+==47785== Mismatched free() / delete / delete []
+==47785==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47785==    by 0x400ABE: test_case6() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400AE3: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==  Address 0x5ab6d90 is 0 bytes inside a block of size 4 alloc'd
+==47785==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47785==    by 0x400AAE: test_case6() (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785==    by 0x400AE3: main (in /projs/framework/huyongan/workspace/my_test/cc_test/valgrind_test/t)
+==47785== 
+==47785== 
+==47785== HEAP SUMMARY:
+==47785==     in use at exit: 72,748 bytes in 3 blocks
+==47785==   total heap usage: 5 allocs, 3 frees, 72,756 bytes allocated
+==47785== 
+==47785== LEAK SUMMARY:
+==47785==    definitely lost: 44 bytes in 2 blocks
+==47785==    indirectly lost: 0 bytes in 0 blocks
+==47785==      possibly lost: 0 bytes in 0 blocks
+==47785==    still reachable: 72,704 bytes in 1 blocks
+==47785==         suppressed: 0 bytes in 0 blocks
+==47785== Rerun with --leak-check=full to see details of leaked memory
+==47785== 
+==47785== For counts of detected and suppressed errors, rerun with: -v
+==47785== Use --track-origins=yes to see where uninitialised values come from
+==47785== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
