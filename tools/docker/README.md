@@ -1,3 +1,11 @@
+从官网拉去ubuntu的docker镜像
+
+docker pull ubuntu:latest
+
+
+
+
+
 显示系统安装的docker镜像
 
 镜像相当于一份未运行代码的代码，
@@ -18,6 +26,18 @@ docker run -it /bin/bash
 
 
 
+启动container
+
+docker start container_id
+
+
+
+#连接到正在运行的container
+
+docker attach container_name
+
+
+
 关闭docker
 
 docker stop container_id
@@ -33,8 +53,6 @@ docker rm container_id
 
 
 // 重新进入docker
-
-docker start container_id
 
  docker exec -it container_id  bash
 
