@@ -20,7 +20,7 @@ std::string myMax(std::string a, std::string b) {
 }
 #endif
 
-int main() {
+int template_function_demo() {
   int a = 10;
   int b = 20;
   std::cout << myMax(a, b) << std::endl;
