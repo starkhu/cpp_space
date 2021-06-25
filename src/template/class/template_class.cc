@@ -81,7 +81,7 @@ int MyMax<std::string, std::string>::compare_b(std::string tar) {
 }
 
 
-int main() {
+int template_class_demo() {
   float a = 10.0;
   int b = 20;
   MyMax<float, int> my_max_1(a, b);
@@ -90,7 +90,7 @@ int main() {
 
   std::string s = "hello";
   MyMax<float, std::string> my_max_2(a, s);
-  
+
   MyMax<std::string, std::string> my_max_3(s, s);
 
   return 0;
