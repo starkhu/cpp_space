@@ -1,0 +1,1 @@
+/home/cambricon/my_workspace/cpp_space/src/func/lib/libfuncdemo.so

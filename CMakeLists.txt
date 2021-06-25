@@ -1,7 +1,40 @@
 cmake_minimum_required(VERSION 2.8)
-project(size_func)
-set(EXECUTABLE_OUTPUT_PATH "${CMAKE_OUTPUT_DIR/bin}")
-set_target_properties(hello PROPERTIES COMPILE_FLAGS "-Werror -fPIC -std=c++11")
+project(cpp_demo)
 
-file(GLOB size_file "")
+#set(EXECUTABLE_OUTPUT_PATH "${CMAKE_OUTPUT_DIR/bin}")
+#set_target_properties(hello PROPERTIES COMPILE_FLAGS "-Werror -fPIC -std=c++11")
+#file(GLOB size_file "")
 
+include(CheckCXXCompilerFlag)
+CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
+CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
+if(COMPILER_SUPPORTS_CXX11)
+       set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+       message("use c++11")
+elseif(COMPILER_SUPPORTS_CXX0X)
+       set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+       message("use c++0x")
+else()
+    message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support.")
+endif()
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+
+set(CMAKE_CXX_FLAGS_DEBUG "-O0")
+set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG ")
+add_definitions(-D_GLIBCXX_USE_CXX11_ABI=1)
+
+include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
+
+###TODO
+##file()
+#add_library(Anonymous SHARED ${CMAKE_SOURCE_DIR}/src/func/)
+#install(TARGETS Anonymous DESTINATION ${CMAKE_SOURCE_DIR}/lib)
+
+
+
+file(GLOB_RECURSE main_file src/main.cc)
+add_subdirectory(src/func)
+add_executable(main ${main_file})
+target_link_libraries(main funcdemo)
