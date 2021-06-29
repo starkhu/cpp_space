@@ -7,12 +7,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 set(BASIC_SRCS "")
 aux_source_directory(. DIR_LIB_SRCS)
-aux_source_directory(call_back CALL_BACK_DIR)
-aux_source_directory(sys_func SYS_FUNC_DIR)
+aux_source_directory(shared_ptr SHARED_PTR_DIR)
+aux_source_directory(unique_ptr UNIQUE_PTR_DIR)
 list(APPEND BASIC_SRCS ${DIR_LIB_SRCS})
-list(APPEND BASIC_SRCS ${CALL_BACK_DIR})
-list(APPEND BASIC_SRCS ${SYS_FUNC_DIR})
+list(APPEND BASIC_SRCS ${SHARED_PTR_DIR})
+list(APPEND BASIC_SRCS ${UNIQUE_PTR_DIR})
 
-add_library(funcdemo SHARED ${BASIC_SRCS})
+add_library(pointerdemo SHARED ${BASIC_SRCS})
 
-install(TARGETS funcdemo DESTINATION ${CMAKE_SOURCE_DIR}/lib)
+install(TARGETS pointerdemo DESTINATION ${CMAKE_SOURCE_DIR}/lib)
