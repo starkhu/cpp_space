@@ -6,16 +6,14 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 set(SRCS_DIR "")
 include_directories(${CMAKE_CURRENT_LIST_DIR}/status)
+include_directories(${CMAKE_CURRENT_LIST_DIR}/logger)
 aux_source_directory(status STATUS_DIR)
+aux_source_directory(logger LOGGER_DIR)
 file(GLOB_RECURSE SRCS_DIR ${CMAKE_CURRENT_LIST_DIR}/valgrind_demos/test_cases.cc)
 list(APPEND SRCS_DIR ${STATUS_DIR})
+list(APPEND SRCS_DIR ${LOGGER_DIR})
 
-message("************************")
-message(${SRCS_DIR})
-message("************************")
 
-#add_library(Anonymous SHARED ${DIR_LIB_SRCS})
 add_library(robostdemo SHARED ${SRCS_DIR})
 
-message(${CMAKE_SOURCE_DIR}/lib)
 install(TARGETS robostdemo DESTINATION ${CMAKE_SOURCE_DIR}/lib)
