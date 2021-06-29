@@ -8,7 +8,7 @@ Status TestCase_InvalidArgument() {
   return errors::InvalidArgument("invalid argument case");
 }
 
-int main() {
+int status_demo() {
   TestCase_OK();
   CHECK_STATUS(TestCase_InvalidArgument());
 }

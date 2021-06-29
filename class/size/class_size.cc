@@ -22,11 +22,11 @@ class DeriveD1 : public DeriveC1 {};
 class DeriveD2 : public DeriveC1, public DeriveC2 {};
 
 
-int main() {
+int class_size() {
   std::cout << "size of NullClass is: " << sizeof(NullClass) << std::endl;
   std::cout << "size of BaseC is: " << sizeof(BaseC) << std::endl;
   std::cout << "size of DeriveC1 is: " << sizeof(DeriveC1) << std::endl;
   std::cout << "size of DeriveD1 is: " << sizeof(DeriveD1) << std::endl;
   std::cout << "size of DeriveD2 is: " << sizeof(DeriveD2) << std::endl;
-
+  return 0;
 }

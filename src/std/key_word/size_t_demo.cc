@@ -10,6 +10,7 @@ void test_case() {
   std::cout << typeid(long unsigned int).name() << std::endl;
 }
 
-int main() {
+int typeid_demo() {
   test_case();
+  return 0;
 }
