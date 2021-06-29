@@ -1,5 +1,6 @@
-#include<iostream>                                                                                                                                                                                          
+#include<iostream>
 #include<numeric>
+
 template<typename T>
 void PrintArray(T* arr, int num) {
   for (int i = 0; i < num; i++) {
@@ -23,7 +24,7 @@ void stdCopyTest() {
   PrintArray(new_arr, 8);
 }
 
-int main() {
+int std_iota() {
   stdIotaTest<float>();
   stdCopyTest<float>();
   return 0;

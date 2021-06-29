@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <string.h>
 
 template<typename T>
 T myMax(T a, T b) {

@@ -7,7 +7,7 @@ struct myclass {
   bool operator() (int i, int j) { return i < j; }
 } myobj;
 
-int main () {
+int max_elements_demo() {
   int myints[] = {3, 7, 2, 5, 6, 4, 9};
 
   // using default comparison:

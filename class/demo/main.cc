@@ -8,7 +8,7 @@
 // #include "tree.h"
 #include "orange.h"
 int Tree::tree_num_ = 0;
-int main() {
+int class_demo() {
   Orange org("shangtangju", "Orange");
   org.setName("shatangju");
   org.printName();

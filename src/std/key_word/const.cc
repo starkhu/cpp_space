@@ -25,7 +25,7 @@ void constPtr() {
   const int* const ptr5 = &var_a;
 }
 
-int main() {
+int const_demo() {
   //constVariable();
   constPtr();
 

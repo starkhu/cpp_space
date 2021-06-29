@@ -36,5 +36,17 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
 
 file(GLOB_RECURSE main_file src/main.cc)
 add_subdirectory(src/func)
+add_subdirectory(src/template)
+add_subdirectory(src/code_quality)
+add_subdirectory(src/memory_manage)
+add_subdirectory(src/namespace)
+add_subdirectory(src/std)
+
 add_executable(main ${main_file})
+
 target_link_libraries(main funcdemo)
+target_link_libraries(main templatedemo)
+target_link_libraries(main robostdemo)
+target_link_libraries(main memorydemo)
+target_link_libraries(main namespacedemo)
+target_link_libraries(main stddemo)

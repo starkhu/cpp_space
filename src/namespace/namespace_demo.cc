@@ -6,7 +6,7 @@
  ************************************************************************************/
 
 
-#include<iostream>                                                                                                                                                                                          
+#include<iostream>
 namespace ns1 {
   void PrintHello() {
     std::cout << "hello , namespace ns1" << std::endl;
@@ -36,7 +36,7 @@ namespace {
   }
 }
 
-int main() {
+int namespace_demo() {
   PrintHello();
   ns2::test();
   return 0;

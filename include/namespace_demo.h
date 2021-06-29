@@ -1,0 +1,2 @@
+int namespace_demo();
+

@@ -36,7 +36,7 @@ void test_case6() {
   free(ptr);
 }
 
-int main() {
+int valgrind_cases() {
   test_case1();
   test_case2();
   test_case3();
