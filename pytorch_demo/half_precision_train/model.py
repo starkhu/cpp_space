@@ -1,8 +1,5 @@
-import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.optim as optim
-
 
 class Net(nn.Module):
 
@@ -21,8 +18,6 @@ class Net(nn.Module):
     def forward(self, x):
         # Max pooling over a (2, 2) window
         x = F.max_pool2d(F.relu(self.conv1(x)), (2, 2))
-        import pdb
-        #pdb.set_trace()
         # If the size is a square you can only specify a single number
         x = F.max_pool2d(F.relu(self.conv2(x)), 2)
         x = x.view(-1, self.num_flat_features(x))
@@ -38,24 +33,3 @@ class Net(nn.Module):
             num_features *= s
         return num_features
 
-
-net = Net()
-#print(net)
-
-x = torch.randn(1,1,32,32)
-
-for i in range(100):
-    out = net(x)
-    
-    
-    optimizer = optim.SGD(net.parameters(), lr=0.01)
-    net.zero_grad()
-    out.backward(torch.randn(1,10))
-    target = torch.randn(10)
-    target = target.view(1, -1)
-    criterion = nn.MSELoss()
-    
-    loss = criterion(out, target)
-    print(loss)
-    
-    optimizer.step()
