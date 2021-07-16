@@ -20,8 +20,14 @@ void iss_test() {
   std::istringstream iss(str1);
   std::string str;
   while(iss >> str) {
-  std::cout << str << std::endl;
+    std::cout << str << std::endl;
   }
+}
+
+void ss_test() {
+  std::stringstream ss;
+  ss << "hello" << ", stream" << ",  123";
+  std::cout << ss.str() << std::endl;
 }
 
 int sstream_demo() {
