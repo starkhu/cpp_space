@@ -1,0 +1,20 @@
+#include "foo.h"
+#include <string>
+#include <pyhton2.6/Python.h>
+
+using namespace std;
+
+static PyObject *_myPrint(PyObject *self, PyObject *args) {
+  char* text;
+  if (!PyArg_ParseTuple(args, "s", &text)) {
+    return NULL;
+  }
+
+  myPrint(text);
+  return Py_None;
+}
+
+static PyMethodDef ExtestMethods[] = {
+  {"myPrint", _myPrint, METH_VARARGS},
+  {NULL, NULL},
+}
