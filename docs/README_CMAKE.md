@@ -1,4 +1,3 @@
-
 # 编译c++代码的流程
 预处理
 g++ -i main.cc -o main.i
@@ -26,25 +25,39 @@ Adds options to the COMPILE_OPTIONS directory property. These options are used w
 
 - set(cmake_variable_option, cmake_variable_option)
 
-让cmake找头文件
 - include_directories([AFTER|BEFORE] [SYSTEM] dir1 [dir2 ...])
+让cmake找到通过include<>引入的头文件
+
 > include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
 把dir1, [dir2 …]这（些）个路径添加到当前CMakeLists及其子CMakeLists的头文件包含路径中;
 AFTER 或者 BEFORE 指定了要添加的路径是添加到原有包含列表之前或之后
 若指定 SYSTEM 参数，则把被包含的路径当做系统包含路径来处理
 
-查找dir路径下的所有源文件，保存到variable变量中.
 aux_source_directory(<dir> <variable>)
+查找dir路径下的所有源文件，保存到variable变量中.
 
-添加库包含路径，相当于添加环境变量LD_LIBRARY_PATH的作用。想当于g++命令中的-L选项
 link_directories(directory1 directory2 ...)
+添加库路径, 告诉编译器这个路径下有需要链接的库
+相当于添加环境变量LD_LIBRARY_PATH的作用。想当于g++命令中的-L选项
+
+target_link_directories(<target> ...<item>... ...)
+target是一个可执行文件，or动态库， or静态库
+item是target依赖的库/库列表
+
+what is difference between link_directories and target_link_directories():
+link_directories只是告诉CMake这个位置可能有lib，而target_link_libraries是真正地要CMake去生成target。
+所以可见区别有二:
+1）link_directories输入的是path，而target_link_libraries输入的是二进制文件名或着已经生成但未link的target；
+2）target_link_libraries需要指定target并且调用linker，link_directories不指定target
 
 
 - message(str_msg)
 编译期间的打印信息
 
-- add_sublibraries(source_dir [binary_dir] [exclude_from_all])
+- add_sublibrary(source_dir [binary_dir] [exclude_from_all])
+添加一个子目录，并构建该子目录
 如果source_dir不是当前目录的子目录，这时需要binary_dir设置source_dir目录
+
 
 ### abi
 使用新的abi接口，默认使用新的abi
