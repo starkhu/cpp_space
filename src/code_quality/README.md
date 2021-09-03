@@ -1,8 +1,6 @@
 # add introduction for cyclomatic_complexity
 
 
-
-
 ## Status
 - enum表征不同的状态： ok, invalid_arguments
 - status不ok时，
