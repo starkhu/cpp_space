@@ -33,3 +33,11 @@ class Net(nn.Module):
             num_features *= s
         return num_features
 
+
+class SimpleNet(nn.Module):
+    def __init__(self):
+        super(SimpleNet, self).__init__()
+        self.fc = nn.Linear(10, 1)
+    def forward(self, x):
+        x = self.fc(x)
+        return x
