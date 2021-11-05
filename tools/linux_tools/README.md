@@ -63,3 +63,8 @@ layout asm：显示反汇编窗口
 layout regs：显示源代码/反汇编和CPU寄存器窗口
 layout split：显示源代码和反汇编窗口
 Ctrl + L：刷新窗口
+
+
+
+core dump
+https://www.cnblogs.com/sky-heaven/p/8426922.html
