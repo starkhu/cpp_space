@@ -1,9 +1,0 @@
-README.md
-setup.py
-csrc/my_print.cc
-hellopkg/__init__.py
-hellopkg/layer_one.py
-kelloo.egg-info/PKG-INFO
-kelloo.egg-info/SOURCES.txt
-kelloo.egg-info/dependency_links.txt
-kelloo.egg-info/top_level.txt
