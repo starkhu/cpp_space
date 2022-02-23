@@ -28,7 +28,7 @@ EXT_MODULES = [Extension(name='myprint',
 
 setuptools.setup(
   name="kelloo", #module name
-  version="0.2.0", #version
+  version="0.3.0", #version
   description='Build a demo test',
   packages=find_packages(exclude=['build', 'dist']),
   #package_dir = PACKAGE_DIR,
