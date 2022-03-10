@@ -1,0 +1,7 @@
+#!/opt/venv/torch/bin/python3.6
+
+import time
+
+print("*" * 30)
+print(" " * 1 , time.strftime('%Y-%m-%d  %a  %H:%M:%S'))
+print("*" * 30)
