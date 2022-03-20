@@ -30,7 +30,7 @@ def mp_self_attention(x, wq, wk, wv, wo):
 
 
 def init_process(rank, size, x, w_q, w_k, w_v, w_o):
-    # torch.cuda.set_device(rank)
+    #torch.cuda.set_device(rank)
     os.environ['MASTER_ADDR'] = '127.0.0.1'
     os.environ['MASTER_PORT'] = '29501'
     dist.init_process_group(backend, rank=rank, world_size=size)

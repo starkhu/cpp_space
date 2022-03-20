@@ -1,8 +1,8 @@
-##模型并行策略的简要介绍
+## 模型并行策略
 
-### 解决的痛点问题
-模型并行策略是大规模分布式训练很常见的一种策略，如果模型中参数非常多，单个device的内存无法支撑模型的运行时，模型并行策略可以有效的解决这个问题。它将模型中的特定子图中的参数均匀的分配到若干个device上，每个device进行部分计算，然后通过allreduce获取所有卡的参数，从而达到获取完整输出的目标。
-模型并行策略的要求是：
+### 什么是模型并行
+模型并行策略是大规模分布式训练很常见的一种策略，如果模型中参数非常多，单个device的内存无法支撑模型运行时，模型并行策略可以有效的解决这个问题。它将模型中的特定子图的参数均匀的分配到若干个device上，每个device进行部分计算，然后通过allreduce获取所有device的参数，从而达到获取完整输出的目标。
+模型并行策略的要求是：如果输入相同，单机的计算结果应该和模型并行的多机的计算结果相同。
 
 ### 适用的场景
 模型并行是算子层面的并行，因此主要适用于：
@@ -10,7 +10,7 @@
 - 其中一个输入来自于权值
 综上， 模型并行中最主要应用的算子就是matmul算子。（conv算子也满足上述要求，不知道为啥没用，个人猜测可能是CNN网络规模不是很大，单卡可以cover, 没必要进行模型并行）
 
-  
+
 #### 场景1：MLP
 MLP的网络结构如下图
 -TBD
@@ -48,7 +48,7 @@ def mlp_by_model_parallel(x, w1, w2):
 
 
 def init_process(rank, size, x, w1, w2):
-    #torch.cuda.set_device(rank)
+    # torch.cuda.set_device(rank)
     os.environ['MASTER_ADDR'] = '127.0.0.1'
     os.environ['MASTER_PORT'] = '29501'
     dist.init_process_group(backend, rank=rank, world_size=size)
@@ -146,7 +146,7 @@ def mp_self_attention(x, wq, wk, wv, wo):
 
 
 def init_process(rank, size, x, w_q, w_k, w_v, w_o):
-    #torch.cuda.set_device(rank)
+    # torch.cuda.set_device(rank)
     os.environ['MASTER_ADDR'] = '127.0.0.1'
     os.environ['MASTER_PORT'] = '29501'
     dist.init_process_group(backend, rank=rank, world_size=size)
@@ -185,12 +185,12 @@ if __name__ == "__main__":
     w_k = torch.randn(h, h)
     w_v = torch.randn(h, h)
     w_o = torch.randn(h, h)
-    
+
     self_attention_on_single_process(x, w_q, w_k, w_v, w_o)
     self_attention_demo_by_model_parallel(mp_size, x, w_q, w_k, w_v, w_o)
 
 ```
-经过实践， 如果输入相同， 单进程demo和模型并行的多进程demo得到的结果是完全相同的（当然，由于计算累积会带来很小的计算误差，低于0.1%）
+经过实践， 如果输入相同， 单进程demo和模型并行的多进程demo得到的结果是完全相同的（当然，由于计算累积会带来很小的误差，低于0.1%）
 
 
 ### 优缺点
