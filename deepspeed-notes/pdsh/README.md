@@ -46,7 +46,7 @@ pdsh -w ssh:hostname1, ssh:hostname2 "shell_cmd" ， 其中hostname1也可替换
 
 example
 ```
-(torch) root@f46b04fa59ea:/tools/glm_project/glm# pdsh -w ssh:10.0.1.13,ssh:10.0.1.15 "cd /tools/glm_project/glm;python print_hello.py;date"
+(torch) root@f46b04fa59ea:/tools/# pdsh -w ssh:10.0.1.13,ssh:10.0.1.15 "cd /tools/;python print_hello.py;date"
 10.0.1.15: ('hello, pid is ', 41208)
 10.0.1.15: Fri Mar  4 17:09:48 CST 2022
 10.0.1.13: ('hello, pid is ', 33936)
