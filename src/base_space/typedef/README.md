@@ -46,7 +46,7 @@ typedef long ssize_t;
 假设表示状态的枚举值有如下：{SUCCESS, FAILED, TIMEOUT}，函数返回值为状态值，实现如下:
 ```
 typedef enum {
-  SUCCESS,                                                                                     
+  SUCCESS,
   FAILED,
   TIMEOUT,
 } Status_t;
@@ -59,16 +59,21 @@ Status_t func() {
 
 
 ### 给结构体起别名
-C语言和C++语言在struct定义这块有区别。TBD
 ```
-// 在 C 语言中
+// 定义一个结构体 Student
 struct Student {
+  int id;
+  char name[20];
+} Stu;
+// 定义一个结构体 Student, 并给你取一个别名Stu.
+typedef struct Student {
   int id;
   char* name;
 } Stu;
 ```
+也可以给结构体指针起别名，如下表达：
 ```
-typedef struct {}
+typedef struct Student *pStu;
 ```
 
 ### 给函数指针起别名
@@ -122,3 +127,4 @@ typedef pfunc (*pfunc1)(float, int);
 
 ### 参考资料：
 > https://blog.csdn.net/hai008007/article/details/80651886
+> https://blog.csdn.net/Forever_Blue_sky/article/details/89321324
